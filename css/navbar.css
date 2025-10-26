@@ -1,0 +1,56 @@
+
+nav.navbar {
+  background: linear-gradient(135deg, #AE8625, #F7EF8A);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-left .logo { 
+    font-weight:700; 
+    color:#2d0115; 
+    text-decoration:none; 
+    font-size:20px; 
+}
+.nav-right { 
+    display: flex; 
+    align-items: center; 
+} 
+.nav-right a { 
+    margin-left:12px; 
+    color:#000; 
+    text-decoration:none; 
+    font-weight:600; 
+    padding: 6px 8px; 
+    border-radius: 4px; 
+    transition: background 0.2s; 
+}
+.nav-right a:hover { 
+    background: rgba(45, 1, 21, 0.1); 
+}
+.nav-right .logout-btn { 
+    background:#2d0115; 
+    padding:6px 10px; 
+    color:#fff; 
+    border-radius:6px; 
+}
+
+/* Profile Link & Picture Styling */
+.profile-link-with-pic {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Space between the image and the word "Profile" */
+    padding: 6px 10px !important;
+}
+
+.nav-profile-pic {
+    width: 32px; /* Fixed size */
+    height: 32px; /* Fixed size */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure image fits the circle */
+    border: 1px solid #2d0115;
+}

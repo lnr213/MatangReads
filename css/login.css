@@ -1,0 +1,104 @@
+/* css/login.css */
+body {
+  margin: 0;
+  /* Use a subtle background image for login page, distinct from homepage */
+  background: url("../Images/library5.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* Adjust for navbar height */
+}
+
+.login-container {
+    position: relative;
+    width: 380px;
+    padding: 40px;
+    border-radius: 20px;
+    /* Glassmorphism effect */
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.15); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.login-container h2 {
+    color: white;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.login-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #F7EF8A; /* Gold label text */
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #AE8625, #F7EF8A); /* Gold button */
+    color: #2d0115; /* Dark text on gold */
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor:pointer;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    background: #FFDD4D;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.login-container p a {
+    color: #F7EF8A; /* Gold link text */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Specific error/success handling for login page against dark background */
+.login-container .error {
+    background: rgba(255, 0, 0, 0.2);
+    color: #FFD2D2;
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.login-container .success {
+    background: rgba(0, 255, 0, 0.2);
+    color: #D2FFD2;
+    border: 1px solid lime;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    text-align: center;
+}
