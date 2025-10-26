@@ -20,10 +20,10 @@ $totalPayments = $pdo->query("SELECT SUM(amount) FROM payments")->fetchColumn();
 <link rel="stylesheet" href="/matangreads/css/admin.css">
 
 <style>
-/* Centering the entire admin dashboard container */
+
 .admin-grid {
     max-width: 1100px;
-    margin: 40px auto; /* This is the key line for centering horizontally */
+    margin: 40px auto; 
     padding: 0 20px;
 }
 </style>
