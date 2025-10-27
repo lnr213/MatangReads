@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($user['user_type'] === 'admin') {
             header('Location: admin/admin_home.php'); // Admin goes to Admin Home
         } else {
-            header('Location: dashboard.php'); // User goes to User Dashboard
+            header('Location: index.php'); // User goes to User Dashboard
         }
         // -------------------------------
         

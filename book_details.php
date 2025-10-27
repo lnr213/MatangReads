@@ -10,7 +10,9 @@ if (!$book) { header('Location: books.php'); exit; }
 <!doctype html>
 <html><head><meta charset="utf-8"><title><?php echo htmlspecialchars($book['bookname']); ?> - MatangReads</title>
 <link rel="stylesheet" href="css/style.css">
-</head><body>
+<link rel="stylesheet" href="css/book_details.css">
+</head>
+<body>
 <?php include 'navbar.php'; ?>
 
 <div class="container">
