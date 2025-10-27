@@ -37,8 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $ins = $pdo->prepare("INSERT INTO borrow_requests (user_id, book_id, borrow_date, due_date) VALUES (?, ?, ?, ?)");
                 $ins->execute([$uid, $book_id, $borrow_date_str, $due_date]);
                 
-                // Reduce quantity (optimistic lock, admin must approve later)
-                // We rely on admin approval to truly reduce quantity
                 
                 $success_msg = 'Reservation request submitted successfully! Due date automatically set to ' . htmlspecialchars($due_date) . '.';
                 // Clear POST data to prevent resubmission
