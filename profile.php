@@ -73,13 +73,13 @@ $user = $user->fetch();
 
 $profile_pic_filename = $user['profile_pic'] ?? '';
 $profile_pic_src = $profile_pic_filename 
-    ? '/matangreads/Images/profiles/' . htmlspecialchars($profile_pic_filename)
+    ? 'Images/profiles/' . htmlspecialchars($profile_pic_filename)
     : 'https://placehold.co/120x120/5f042f/ffffff?text=User'; // Default placeholder
 ?>
 <!doctype html>
 <html>
 <head><meta charset="utf-8"><title>Profile Settings - MatangReads</title>
-<link rel="stylesheet" href="/matangreads/css/style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <?php include 'navbar.php'; ?>

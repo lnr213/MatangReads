@@ -17,7 +17,7 @@ CREATE TABLE users (
   full_name VARCHAR(150),
   profile_pic VARCHAR(255) NULL,
   credit_balance DECIMAL(8,2) DEFAULT 0.00,
-  date_joined TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+  date_joined TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 

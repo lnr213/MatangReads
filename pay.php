@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!doctype html>
 <html><head><meta charset="utf-8"><title>Make Payment - MatangReads</title>
-<link rel="stylesheet" href="/matangreads/css/style.css">
+<link rel="stylesheet" href="css/style.css">
 </head><body>
 <?php include 'navbar.php'; ?>
 <div class="container content-wrapper">
