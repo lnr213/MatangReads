@@ -50,8 +50,13 @@ if (!$book) { header('Location: manage_books.php'); exit; }
 ?>
 <!doctype html>
 <html><head><meta charset="utf-8"><title>Edit Book - <?php echo htmlspecialchars($book['bookname']); ?></title>
+<<<<<<< HEAD
 <link rel="stylesheet" href="../css/style.css"> 
 <link rel="stylesheet" href="../css/admin.css">
+=======
+<link rel="stylesheet" href="css/style.css"> 
+<link rel="stylesheet" href="css/admin.css">
+>>>>>>> 5e4c1969f453c75c17a0be1ac2e61abfbe4e71d9
 
 </head><body>
 <?php include '../navbar.php'; ?>

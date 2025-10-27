@@ -35,8 +35,13 @@ $users = $pdo->query("SELECT user_id, username, email, user_type, full_name, dat
 <!doctype html>
 <html><head><meta charset="utf-8"><title>Manage Users</title>
 <!-- IMPORTANT: Import both style.css and admin.css -->
+<<<<<<< HEAD
 <link rel="stylesheet" href="../css/style.css"> 
 <link rel="stylesheet" href="../css/admin.css">
+=======
+<link rel="stylesheet" href="css/style.css"> 
+<link rel="stylesheet" href="css/admin.css">
+>>>>>>> 5e4c1969f453c75c17a0be1ac2e61abfbe4e71d9
 
 </head><body>
 <?php include '../navbar.php'; ?>
