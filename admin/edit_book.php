@@ -47,11 +47,9 @@ $stmt->execute([$id]);
 $book = $stmt->fetch();
 if (!$book) { header('Location: manage_books.php'); exit; }
 
-// If we land here after a failed POST (e.g. failed image upload), $msg will be displayed.
 ?>
 <!doctype html>
 <html><head><meta charset="utf-8"><title>Edit Book - <?php echo htmlspecialchars($book['bookname']); ?></title>
-<!-- IMPORT SHARED STYLES FOR FORM/BUTTONS, AND ADMIN STYLES -->
 <link rel="stylesheet" href="/matangreads/css/style.css"> 
 <link rel="stylesheet" href="/matangreads/css/admin.css">
 

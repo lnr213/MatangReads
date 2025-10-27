@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] !== 'admin') {
 
 // stats
 $totalUsers = $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
-$totalBorrowed = $pdo->query("SELECT COUNT(*) FROM borrow_requests WHERE status='approved'")->fetchColumn(); // Only count approved/out
+$totalBorrowed = $pdo->query("SELECT COUNT(*) FROM borrow_requests WHERE status='approved'")->fetchColumn(); // Only count approved
 $totalAvailable = $pdo->query("SELECT SUM(quantity) FROM books")->fetchColumn();
 $bookRequests = $pdo->query("SELECT COUNT(*) FROM book_requests WHERE status='pending'")->fetchColumn();
 $overdue = $pdo->query("SELECT COUNT(*) FROM borrow_requests WHERE due_date < CURDATE() AND status='approved'")->fetchColumn();
@@ -18,6 +18,8 @@ $totalPayments = $pdo->query("SELECT SUM(amount) FROM payments")->fetchColumn();
 <html><head><meta charset="utf-8"><title>Admin Home</title>
 <link rel="stylesheet" href="/matangreads/css/style.css"> 
 <link rel="stylesheet" href="/matangreads/css/admin.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 </head><body>
 <?php include '../navbar.php'; ?>
@@ -68,4 +70,5 @@ $totalPayments = $pdo->query("SELECT SUM(amount) FROM payments")->fetchColumn();
   </div>
 
 </div>
-</body></html>
+</body>
+</html>

@@ -33,4 +33,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="form-buttons"><button type="submit">Send request</button></div>
   </form>
 </div>
-</body></html>
+</body>
+</html>

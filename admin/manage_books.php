@@ -31,12 +31,12 @@ if (isset($_GET['delete'])) {
     $id = (int)$_GET['delete'];
     $pdo->prepare("DELETE FROM books WHERE book_id=?")->execute([$id]);
     $msg = "<p class='success'>Book deleted successfully.</p>";
-    // Use POST-Redirect-GET pattern for cleaner URL
+    // pergi ke manage books balik
     header('Location: manage_books.php'); 
     exit;
 }
 
-// Search logic (optional, but good to add the feature)
+// Search buku or nama author
 $search = $_GET['search'] ?? '';
 $sql = "SELECT * FROM books WHERE 1=1";
 $params = [];

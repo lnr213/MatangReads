@@ -81,12 +81,12 @@ VALUES
 ('Dark Moon: The Blood Altar, Vol. 1','','Manga','The seven most popular boys at Decelis Academy all share a secret―they’re vampires.','DarkMoon.jpg', 3),
 ('Home Is Where the Bodies Are','Jeneva Rose','Horror',"Three estranged siblings reunite to sort out their mother's estate.",'jenevarose.jpg', 2);
 
--- Insert Sample Users (Set a default Admin and a test User)
+-- Sample Users 
 INSERT INTO users (username, password, user_type, full_name, email, credit_balance)
 VALUES 
 ('admin', '$2y$10$Q.P1uB7tE8h5Y2k6z4j0oO5j9Yc3yR7K/jX5hL9g1vA0v2/qA5zV6', 'admin', 'Library Admin', 'admin@matangreads.com', 0.00),
 ('user1', '$2y$10$Q.P1uB7tE8h5Y2k6z4j0oO5j9Yc3yR7K/jX5hL9g1vA0v2/qA5zV6', 'user', 'Test User One', 'user1@example.com', 0.00),
 ('ain', '$2y$10$Q.P1uB7tE8h5Y2k6z4j0oO5j9Yc3yR7K/jX5hL9g1vA0v2/qA5zV6', 'user', 'nurain', 'credit@example.com', 50.00), -- User with existing credit
 ('mel', '$2y$10$Q.P1uB7tE8h5Y2k6z4j0oO5j9Yc3yR7K/jX5hL9g1vA0v2/qA5zV6', 'user', 'melissa', 'borrower@example.com', 0.00);
--- Note: password hash for 'password123' is repeated for simplicity.
+-- password hash for 'password123' is repeated for simplicity.
 
