@@ -16,8 +16,8 @@ $totalPayments = $pdo->query("SELECT SUM(amount) FROM payments")->fetchColumn();
 ?>
 <!doctype html>
 <html><head><meta charset="utf-8"><title>Admin Home</title>
-<link rel="stylesheet" href="/matangreads/css/style.css"> 
-<link rel="stylesheet" href="/matangreads/css/admin.css">
+<link rel="stylesheet" href="../css/style.css"> 
+<link rel="stylesheet" href="../css/admin.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 

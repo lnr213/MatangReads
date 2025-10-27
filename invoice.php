@@ -11,7 +11,7 @@ $payments = $payments->fetchAll();
 ?>
 <!doctype html>
 <html><head><meta charset="utf-8"><title>Invoices - MatangReads</title>
-<link rel="stylesheet" href="/matangreads/css/style.css">
+<link rel="stylesheet" href="css/style.css">
 </head><body>
 <?php include 'navbar.php'; ?>
 
@@ -43,7 +43,7 @@ $payments = $payments->fetchAll();
   <?php endif; ?>
 
   <div style="text-align: center;">
-    <a href="/matangreads/pay.php" class="btn" style="background: #2d0115; font-size: 16px;">Make New Payment</a>
+    <a href="pay.php" class="btn" style="background: #2d0115; font-size: 16px;">Make New Payment</a>
   </div>
 </div>
 </div>

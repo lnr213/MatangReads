@@ -50,8 +50,8 @@ if (!$book) { header('Location: manage_books.php'); exit; }
 ?>
 <!doctype html>
 <html><head><meta charset="utf-8"><title>Edit Book - <?php echo htmlspecialchars($book['bookname']); ?></title>
-<link rel="stylesheet" href="/matangreads/css/style.css"> 
-<link rel="stylesheet" href="/matangreads/css/admin.css">
+<link rel="stylesheet" href="../css/style.css"> 
+<link rel="stylesheet" href="../css/admin.css">
 
 </head><body>
 <?php include '../navbar.php'; ?>
@@ -98,7 +98,7 @@ if (!$book) { header('Location: manage_books.php'); exit; }
                 <label style="display: block; font-weight: bold; color: #333;">Current Image</label>
                 <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
                     <input type="hidden" name="current_image" value="<?php echo htmlspecialchars($book['image']); ?>">
-                    <img src="/matangreads/Images/<?php echo htmlspecialchars($book['image']);?>" style="max-height: 80px; border: 1px solid #ddd; border-radius: 4px;">
+                    <img src="Images/<?php echo htmlspecialchars($book['image']);?>" style="max-height: 80px; border: 1px solid #ddd; border-radius: 4px;">
                     <span style="color:#333; font-size: 0.9em;"><?php echo htmlspecialchars($book['image']); ?></span>
                 </div>
 

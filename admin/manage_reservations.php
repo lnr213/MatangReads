@@ -48,8 +48,8 @@ $rows = $pdo->query("SELECT br.*, b.bookname, u.username
 ?>
 <!doctype html>
 <html><head><meta charset="utf-8"><title>Manage Reservations</title>
-<link rel="stylesheet" href="/matangreads/css/style.css">
-<link rel="stylesheet" href="/matangreads/css/admin.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/admin.css">
 </head><body>
 <?php include '../navbar.php'; ?>
 <div class="admin-grid">

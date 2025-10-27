@@ -17,7 +17,7 @@ if (!$book) { header('Location: books.php'); exit; }
 
 <div class="container">
   <div class="book-detail">
-  <img src="/matangreads/Images/<?php echo htmlspecialchars($book['image']);?>" alt="">
+  <img src="Images/<?php echo htmlspecialchars($book['image']);?>" alt="">
   
   <div class="book-info">
       <h2><?php echo htmlspecialchars($book['bookname']);?></h2>
@@ -27,9 +27,9 @@ if (!$book) { header('Location: books.php'); exit; }
       <p><strong>Stock:</strong> <?php echo (int)$book['quantity'];?></p>
 
       <?php if(isset($_SESSION['user_id'])): ?>
-        <a class="btn" href="/matangreads/borrow.php?id=<?php echo $book['book_id']; ?>">Reserve / Borrow</a>
+        <a class="btn" href="borrow.php?id=<?php echo $book['book_id']; ?>">Reserve / Borrow</a>
       <?php else: ?>
-        <p><a href="/matangreads/login.php">Login</a> to reserve</p>
+        <p><a href="login.php">Login</a> to reserve</p>
       <?php endif; ?>
   </div>
 </div>

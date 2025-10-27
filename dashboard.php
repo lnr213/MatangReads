@@ -54,9 +54,9 @@ $books = $stmt->fetchAll();
 <head>
 <meta charset="utf-8">
 <title>Dashboard - MatangReads</title>
-<link rel="stylesheet" href="/matangreads/css/style.css">
-<link rel="stylesheet" href="/matangreads/css/admin.css">
-<link rel="stylesheet" href="/matangreads/css/navbar.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
 <?php include 'navbar.php'; ?>
@@ -77,7 +77,7 @@ $books = $stmt->fetchAll();
 <section class="user-activity">
 <h3 style="color: #ffffffff; border-bottom: 2px solid #AE8625; padding-bottom: 5px; margin-bottom: 15px;">Your Borrowing Activity</h3>
 <?php if (empty($reservations)): ?>
-<p>You have no current or past reservations. <a href="/matangreads/books.php">Start browsing now!</a></p>
+<p>You have no current or past reservations. <a href="books.php">Start browsing now!</a></p>
 <?php else: ?>
 <table class="simple-table">
 <thead>
@@ -149,11 +149,11 @@ RM <?php echo number_format($net_amount_due, 2); ?>
 </table>
 
 <div style="text-align: right; margin-top: 15px;">
-<a class="btn" href="/matangreads/pay.php?amount=<?php echo $net_amount_due; ?>">
+<a class="btn" href="pay.php?amount=<?php echo $net_amount_due; ?>">
 <?php echo $net_amount_due > 0 ? 'Pay Outstanding Fees' : 'Make Optional Payment'; ?> 
 (RM <?php echo number_format($net_amount_due, 2); ?>)
 </a>
-<a class="btn" href="/matangreads/invoice.php" style="background-color: #AE8625; margin-left: 10px;">View Payment History</a>
+<a class="btn" href="invoice.php" style="background-color: #AE8625; margin-left: 10px;">View Payment History</a>
 </div>
 <?php endif; ?>
 </section>
@@ -163,10 +163,10 @@ RM <?php echo number_format($net_amount_due, 2); ?>
 <div class="books-box">
 <?php foreach ($books as $b): ?>
 <div class="book-card">
-<img src="/matangreads/Images/<?php echo htmlspecialchars($b['image']); ?>" alt="<?php echo htmlspecialchars($b['bookname']); ?>">
+<img src="Images/<?php echo htmlspecialchars($b['image']); ?>" alt="<?php echo htmlspecialchars($b['bookname']); ?>">
 <h4><?php echo htmlspecialchars($b['bookname']); ?></h4>
 <p><?php echo htmlspecialchars($b['author']); ?></p>
-<a class="btn" href="/matangreads/book_details.php?id=<?php echo $b['book_id']; ?>">Details</a>
+<a class="btn" href="book_details.php?id=<?php echo $b['book_id']; ?>">Details</a>
 </div>
 <?php endforeach; ?>
 <?php if (empty($books)): ?>

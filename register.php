@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!doctype html>
 <html>
 <head><meta charset="utf-8"><title>Register - MatangReads</title>
-<link rel="stylesheet" href="/matangreads/css/login.css">
+<link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 <?php include 'navbar.php'; ?>

@@ -23,7 +23,7 @@ $cats = $pdo->query("SELECT DISTINCT category FROM books")->fetchAll(PDO::FETCH_
 ?>
 <!doctype html>
 <html><head><meta charset="utf-8"><title>Books - MatangReads</title>
-<link rel="stylesheet" href="/matangreads/css/style.css">
+<link rel="stylesheet" href="css/style.css">
 </head><body>
 <?php include 'navbar.php'; ?>
 
@@ -43,12 +43,12 @@ $cats = $pdo->query("SELECT DISTINCT category FROM books")->fetchAll(PDO::FETCH_
   <div class="books-box">
   <?php foreach($books as $b): ?>
     <div class="book-card">
-      <img src="/matangreads/Images/<?php echo htmlspecialchars($b['image']);?>" alt="">
+      <img src="Images/<?php echo htmlspecialchars($b['image']);?>" alt="">
       <h4><?php echo htmlspecialchars($b['bookname']);?></h4>
       <p><?php echo htmlspecialchars($b['author']);?></p>
       <p>Category: <?php echo htmlspecialchars($b['category']);?></p>
       <p>Available: <?php echo (int)$b['quantity']; ?></p>
-      <a class="btn" href="/matangreads/book_details.php?id=<?php echo $b['book_id']; ?>">Details</a>
+      <a class="btn" href="book_details.php?id=<?php echo $b['book_id']; ?>">Details</a>
     </div>
   <?php endforeach; ?>
   </div>
