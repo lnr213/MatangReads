@@ -26,7 +26,7 @@ session_start();
 <section class="slideshow">
   <div class="slideshow-container">
     <?php
-    // fetch a few images from DB
+    // fetch a images from DB
     $stmt = $pdo->query("SELECT image, bookname FROM books LIMIT 8");
     while ($row = $stmt->fetch()) {
         $img = htmlspecialchars($row['image']);
