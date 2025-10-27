@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] !== 'admin') {
 $id = (int)($_GET['id'] ?? 0);
 $msg = '';
 
-// Handle POST request for updating the book
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['bookname'];
     $author = $_POST['author'];
@@ -54,29 +54,7 @@ if (!$book) { header('Location: manage_books.php'); exit; }
 <!-- IMPORT SHARED STYLES FOR FORM/BUTTONS, AND ADMIN STYLES -->
 <link rel="stylesheet" href="/matangreads/css/style.css"> 
 <link rel="stylesheet" href="/matangreads/css/admin.css">
-<style>
-/* Custom style for this form to ensure labels and fields align perfectly */
-.input-grid {
-    display: grid;
-    /* Two columns: 120px for the label, and 'auto' for the input field */
-    grid-template-columns: 120px auto; 
-    gap: 10px;
-    align-items: center;
-    margin-bottom: 5px; /* Spacing between rows */
-}
-.input-grid label {
-    text-align: right;
-    font-weight: bold;
-    color: #333; /* Darker text for readability */
-}
-.input-grid input, .input-grid textarea {
-    margin: 0; /* Remove default margins */
-}
-/* Ensure the description box takes up the full grid width */
-.full-grid-row {
-    grid-column: 1 / 3;
-}
-</style>
+
 </head><body>
 <?php include '../navbar.php'; ?>
 

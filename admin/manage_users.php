@@ -38,22 +38,6 @@ $users = $pdo->query("SELECT user_id, username, email, user_type, full_name, dat
 <link rel="stylesheet" href="/matangreads/css/style.css"> 
 <link rel="stylesheet" href="/matangreads/css/admin.css">
 
-<style>
-/* Custom style for action links to change text color to dark blue */
-.simple-table td a {
-    color: #0056b3; 
-    text-decoration: none;
-    font-weight: 600;
-}
-.simple-table td a:hover {
-    text-decoration: underline;
-}
-.simple-table td {
-    /* Ensure the separator | is also readable */
-    color: #555; 
-}
-</style>
-
 </head><body>
 <?php include '../navbar.php'; ?>
 

@@ -19,15 +19,6 @@ $totalPayments = $pdo->query("SELECT SUM(amount) FROM payments")->fetchColumn();
 <link rel="stylesheet" href="/matangreads/css/style.css"> 
 <link rel="stylesheet" href="/matangreads/css/admin.css">
 
-<style>
-
-.admin-grid {
-    max-width: 1100px;
-    margin: 40px auto; 
-    padding: 0 20px;
-}
-</style>
-
 </head><body>
 <?php include '../navbar.php'; ?>
 

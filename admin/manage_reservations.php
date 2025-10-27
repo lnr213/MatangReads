@@ -5,17 +5,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] !== 'admin') {
     header('Location: ../login.php'); exit;
 }
 
-// -------------------------------------------------------------
-// 1. FINE CALCULATION LOGIC (REMOVED - NOW IN config.php)
-// -------------------------------------------------------------
-// Define the fine rate (e.g., RM0.50 per day)
-// REMOVED: define('DAILY_FINE_RATE', 0.50);
-// REMOVED: function calculate_fine(...) { ... }
-
-
-// -------------------------------------------------------------
-// 2. STATUS & BOOK QUANTITY MANAGEMENT
-// -------------------------------------------------------------
 if (isset($_GET['action']) && isset($_GET['id'])) {
     $action = $_GET['action'];
     $id = (int)$_GET['id'];

@@ -5,6 +5,7 @@ body {
   color: #fff; 
   font-family: Arial, sans-serif;
   min-height: 100vh; 
+  align-items: center;
 }
 
 a {
@@ -17,7 +18,11 @@ a:hover {
     text-decoration: underline;
 }
 
-.admin-grid { max-width:1100px; margin:20px auto; }
+.admin-grid {
+    max-width: 1100px;
+    margin: 40px auto; 
+    padding: 0 20px;
+    display: table}
 
 .stats { 
     display:flex; 
@@ -91,3 +96,16 @@ a:hover {
     font-style: italic;
 }
 
+/* Custom style for action links to change text color to dark blue */
+.simple-table td a {
+    color: #0056b3; 
+    text-decoration: none;
+    font-weight: 600;
+}
+.simple-table td a:hover {
+    text-decoration: underline;
+}
+.simple-table td {
+    /* Ensure the separator | is also readable */
+    color: #555; 
+}
