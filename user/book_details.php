@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../config.php';
 session_start();
 $id = (int)($_GET['id'] ?? 0);
 $stmt = $pdo->prepare("SELECT * FROM books WHERE book_id=?");
@@ -9,15 +9,15 @@ if (!$book) { header('Location: books.php'); exit; }
 ?>
 <!doctype html>
 <html><head><meta charset="utf-8"><title><?php echo htmlspecialchars($book['bookname']); ?> - MatangReads</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/book_details.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/book_details.css">
 </head>
 <body>
-<?php include 'navbar.php'; ?>
+<?php include '../navbar.php'; ?>
 
 <div class="container">
   <div class="book-detail">
-  <img src="Images/<?php echo htmlspecialchars($book['image']);?>" alt="">
+  <img src="../Images/<?php echo htmlspecialchars($book['image']);?>" alt="">
   
   <div class="book-info">
       <h2><?php echo htmlspecialchars($book['bookname']);?></h2>

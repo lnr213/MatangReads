@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../config.php';
 session_start();
 if (!isset($_SESSION['user_id'])) header('Location: login.php');
 $uid = $_SESSION['user_id'];
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = 'Please choose a borrow date.';
     } else {
         try {
-            // Calculate Due Date: 14 days (2 weeks) from borrow date
+            // Due Date 2 weeks from borrow date
             $borrow_date = new DateTime($borrow_date_str);
             $due_date = $borrow_date->modify('+14 days')->format('Y-m-d');
             
@@ -50,10 +50,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!doctype html>
 <html><head><meta charset="utf-8"><title>Borrow - MatangReads</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/navbar.css">
 </head><body>
-<?php include 'navbar.php'; ?>
+<?php include '../navbar.php'; ?>
 <div class="container">
 <div class="form-container" style="max-width: 500px; margin: 30px auto;">
   <h2>Reserve: <?php echo htmlspecialchars($book['bookname']);?></h2>

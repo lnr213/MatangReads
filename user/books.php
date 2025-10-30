@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../config.php';
 session_start();
 $q = trim($_GET['q'] ?? '');
 $category = trim($_GET['category'] ?? '');
@@ -23,12 +23,12 @@ $cats = $pdo->query("SELECT DISTINCT category FROM books")->fetchAll(PDO::FETCH_
 ?>
 <!doctype html>
 <html><head><meta charset="utf-8"><title>Books - MatangReads</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../css/style.css">
 </head><body>
-<?php include 'navbar.php'; ?>
+<?php include '../navbar.php'; ?>
 
 <div class="container">
-  <h2>Books</h2>
+  <h2 style="color: #ffffffff;">Books</h2>
   <form method="get" class="search-inline">
     <input name="q" placeholder="Search by title or author" value="<?php echo htmlspecialchars($q); ?>">
     <select name="category">
@@ -43,7 +43,7 @@ $cats = $pdo->query("SELECT DISTINCT category FROM books")->fetchAll(PDO::FETCH_
   <div class="books-box">
   <?php foreach($books as $b): ?>
     <div class="book-card">
-      <img src="Images/<?php echo htmlspecialchars($b['image']);?>" alt="">
+      <img src="../Images/<?php echo htmlspecialchars($b['image']);?>" alt="">
       <h4><?php echo htmlspecialchars($b['bookname']);?></h4>
       <p><?php echo htmlspecialchars($b['author']);?></p>
       <p>Category: <?php echo htmlspecialchars($b['category']);?></p>

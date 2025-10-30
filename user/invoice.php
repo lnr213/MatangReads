@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../config.php';
 session_start();
 if (!isset($_SESSION['user_id'])) header('Location: login.php');
 $uid = $_SESSION['user_id'];
@@ -11,9 +11,9 @@ $payments = $payments->fetchAll();
 ?>
 <!doctype html>
 <html><head><meta charset="utf-8"><title>Invoices - MatangReads</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../css/style.css">
 </head><body>
-<?php include 'navbar.php'; ?>
+<?php include '../navbar.php'; ?>
 
 <div class="container" style="max-width: 900px; margin: 40px auto;">
 <div class="form-container"> 

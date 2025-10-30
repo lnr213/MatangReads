@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../config.php';
 session_start();
 if (!isset($_SESSION['user_id'])) header('Location: login.php');
 $uid = $_SESSION['user_id'];
@@ -44,9 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // NOTE: In a real system, card details should not be stored/processed here.
         $msg = "<p class='error'>Card details are required for Card payment.</p>";
     } else {
-        // ----------------------------------------------------
         // CORE CREDIT/FINE PROCESSING LOGIC
-        // ----------------------------------------------------
         
         $net_amount = $amount_paid; // The amount we have to work with
         $current_credit = $user_credit;
@@ -91,9 +89,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!doctype html>
 <html><head><meta charset="utf-8"><title>Make Payment - MatangReads</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../css/style.css">
 </head><body>
-<?php include 'navbar.php'; ?>
+<?php include '../navbar.php'; ?>
 <div class="container content-wrapper">
 <div class="form-container" style="max-width: 550px; margin: 30px auto;">
   <h2>Make a Payment</h2>

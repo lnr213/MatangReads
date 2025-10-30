@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../config.php';
 session_start();
 if (!isset($_SESSION['user_id'])) header('Location: login.php');
 
@@ -54,12 +54,12 @@ $books = $stmt->fetchAll();
 <head>
 <meta charset="utf-8">
 <title>Dashboard - MatangReads</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/admin.css">
-<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/admin.css">
+<link rel="stylesheet" href="../css/navbar.css">
 </head>
 <body>
-<?php include 'navbar.php'; ?>
+<?php include '../navbar.php'; ?>
 
 <div class="container">
 <h2 style="color: #ffffffff;">Welcome back, <?php echo htmlspecialchars($username); ?></h2>
@@ -163,7 +163,7 @@ RM <?php echo number_format($net_amount_due, 2); ?>
 <div class="books-box">
 <?php foreach ($books as $b): ?>
 <div class="book-card">
-<img src="Images/<?php echo htmlspecialchars($b['image']); ?>" alt="<?php echo htmlspecialchars($b['bookname']); ?>">
+<img src="../Images/<?php echo htmlspecialchars($b['image']); ?>" alt="<?php echo htmlspecialchars($b['bookname']); ?>">
 <h4><?php echo htmlspecialchars($b['bookname']); ?></h4>
 <p><?php echo htmlspecialchars($b['author']); ?></p>
 <a class="btn" href="book_details.php?id=<?php echo $b['book_id']; ?>">Details</a>

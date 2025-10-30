@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../config.php';
 session_start();
 if (!isset($_SESSION['user_id'])) header('Location: login.php');
 $msg = '';
@@ -18,10 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Request Book - MatangReads</title>
-<link rel="stylesheet" href="css/style.css">
+<html>
+<head><meta charset="utf-8"><title>Request Book - MatangReads</title>
+<link rel="stylesheet" href="../css/style.css">
 </head><body>
-<?php include 'navbar.php'; ?>
+<?php include '../navbar.php'; ?>
 <div class="form-container">
   <h2>Request a new book</h2>
   <?php if($msg) echo "<p class='success'>".htmlspecialchars($msg)."</p>"; ?>

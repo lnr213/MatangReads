@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../config.php';
 session_start();
 if (!isset($_SESSION['user_id'])) header('Location: login.php');
 
@@ -79,10 +79,10 @@ $profile_pic_src = $profile_pic_filename
 <!doctype html>
 <html>
 <head><meta charset="utf-8"><title>Profile Settings - MatangReads</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<?php include 'navbar.php'; ?>
+<?php include '../navbar.php'; ?>
 <div class="container">
 <div class="form-container">
   <h2 style="color: #2d0115; border-bottom: 2px solid #AE8625; padding-bottom: 5px;">Profile Settings</h2>

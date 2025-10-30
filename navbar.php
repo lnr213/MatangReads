@@ -13,46 +13,46 @@ if (isset($_SESSION['user_id']) && isset($pdo)) {
         $stmt->execute([$_SESSION['user_id']]);
         $user_data = $stmt->fetch();
         if ($user_data && $user_data['profile_pic']) {
-            $user_profile_pic = "Images/profiles/" . htmlspecialchars($user_data['profile_pic']);
+            // FIX: Use /matangreads/ in the image path
+            $user_profile_pic = "/matangreads/Images/profiles/" . htmlspecialchars($user_data['profile_pic']);
         }
     } catch (Exception $e) {
         // Log error but continue execution without profile pic
     }
 }
 
-// Fallback image path if no custom image is set
-$default_profile_pic = "Images/profiles/default_user.png";
+// Fallback image path 
+$default_profile_pic = "/matangreads/Images/profiles/default_user.png";
 ?>
-<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="/matangreads/css/navbar.css">
 <nav class="navbar">
     <div class="nav-left">
-        <a href="index.php" class="logo">📚 MatangReads</a>
+        <a href="/matangreads/index.php" class="logo">📚 MatangReads</a>
     </div>
     <div class="nav-right">
         <?php if (isset($_SESSION['user_id'])): ?>
             <?php if ($_SESSION['user_type'] === 'admin'): ?>
-                <!-- Admin punya -->
-                <a href="admin/admin_home.php">Admin Home</a>
-                <a href="admin/manage_books.php">Books</a>
-                <a href="admin/manage_users.php">Users</a>
-                <a href="admin/manage_reservations.php">Reservations</a>
-                <a href="admin/manage_payments.php">Payments</a> 
-                <a href="admin/reports.php">Reports</a>
+                <a href="/matangreads/admin/admin_home.php">Admin Home</a>
+                <a href="/matangreads/admin/manage_books.php">Books</a>
+                <a href="/matangreads/admin/manage_users.php">Users</a>
+                <a href="/matangreads/admin/manage_book_requests.php">Book Requests</a>
+                <a href="/matangreads/admin/manage_reservations.php">Reservations</a>
+                <a href="/matangreads/admin/manage_payments.php">Payments</a> 
+                <a href="/matangreads/admin/reports.php">Reports</a>
             <?php else: ?>
-                <!-- User -->
-                <a href="dashboard.php">Dashboard</a>
-                <a href="books.php">Books</a>
-                <a href="request_book.php">Request</a>
-                <a href="invoice.php">Invoices</a>
-                <a href="profile.php" class="profile-link-with-pic">
+                <a href="/matangreads/user/dashboard.php">Dashboard</a>
+                <a href="/matangreads/user/books.php">Books</a>
+                <a href="/matangreads/user/request_book.php">Request</a>
+                <a href="/matangreads/user/invoice.php">Invoices</a>
+                <a href="/matangreads/user/profile.php" class="profile-link-with-pic">
                     <img src="<?php echo $user_profile_pic ?: $default_profile_pic; ?>" alt="Profile Picture" class="nav-profile-pic">
                     Profile
                 </a>
             <?php endif; ?>
-            <a href="logout.php" class="logout-btn">Logout</a>
+            <a href="/matangreads/logout.php" class="logout-btn">Logout</a>
         <?php else: ?>
-            <a href="login.php">Login</a>
-            <a href="register.php">Register</a>
+            <a href="/matangreads/login.php">Login</a>
+            <a href="/matangreads/register.php">Register</a>
         <?php endif; ?>
     </div>
 </nav>

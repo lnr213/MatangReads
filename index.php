@@ -15,7 +15,7 @@ session_start();
 <?php include 'navbar.php'; ?>
 
 <section class="about">
-    <h1>📚 Selamat Datang to MatangReads Library</h1>
+    <h1>📚 Welcome to MatangReads Library</h1>
     <p>
       MatangReads is a digital library system. <br><br>
       🔎 Easy Book Search <br> 📖 Wide Selection <br> ⏱ Quick Borrow & Request <br>💻 24/7 Digital Access
@@ -37,7 +37,7 @@ session_start();
 </section>
 
 <div class="view-more">
-  <a href="books.php" class="btn">View More Books</a>
+  <a href="user/books.php" class="btn">View More Books</a>
 </div>
 
 <footer>

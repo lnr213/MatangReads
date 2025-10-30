@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../config.php';
 session_start();
 if (!isset($_SESSION['user_id'])) header('Location: login.php');
 
@@ -23,7 +23,7 @@ if (!$payment) {
 ?>
 <!doctype html>
 <html><head><meta charset="utf-8"><title>Receipt #<?php echo $payment_id; ?> - MatangReads</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../css/style.css">
 <style>
 /* Style for the receipt block */
 .receipt-box {
@@ -78,7 +78,7 @@ if (!$payment) {
 }
 </style>
 </head><body>
-<?php include 'navbar.php'; ?>
+<?php include '../navbar.php'; ?>
 
 <div class="receipt-box">
     <div class="receipt-header">

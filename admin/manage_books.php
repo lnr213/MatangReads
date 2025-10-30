@@ -52,13 +52,8 @@ $books = $stmt->fetchAll();
 ?>
 <!doctype html>
 <html><head><meta charset="utf-8"><title>Manage Books</title>
-<<<<<<< HEAD
 <link rel="stylesheet" href="../css/style.css"> 
 <link rel="stylesheet" href="../css/admin.css">
-=======
-<link rel="stylesheet" href="css/style.css"> 
-<link rel="stylesheet" href="css/admin.css">
->>>>>>> 5e4c1969f453c75c17a0be1ac2e61abfbe4e71d9
 </head><body>
 <?php include '../navbar.php'; ?>
 
@@ -107,11 +102,10 @@ $books = $stmt->fetchAll();
   </form>
   
   <table class="simple-table">
-    <thead><tr><th>ID</th><th>Title</th><th>Author</th><th>Qty</th><th>Actions</th></tr></thead>
+    <thead><tr><th>Title</th><th>Author</th><th>Qty</th><th>Actions</th></tr></thead>
     <tbody>
       <?php foreach($books as $b): ?>
         <tr>
-          <td><?php echo $b['book_id'];?></td>
           <td><?php echo htmlspecialchars($b['bookname']);?></td>
           <td><?php echo htmlspecialchars($b['author']);?></td>
           <td><?php echo (int)$b['quantity'];?></td>
