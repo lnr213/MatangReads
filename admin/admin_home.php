@@ -18,17 +18,11 @@ $totalPayments = $pdo->query("SELECT SUM(amount) FROM payments")->fetchColumn();
 <html><head><meta charset="utf-8"><title>Admin Home</title>
 <link rel="stylesheet" href="../css/style.css"> 
 <link rel="stylesheet" href="../css/admin.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
 
-<style>
 
-.admin-grid {
-    max-width: 1100px;
-    margin: 40px auto; 
-    padding: 0 20px;
-}
-</style>
-
-</head><body>
+</head>
+<body>
 <?php include '../navbar.php'; ?>
 
 <div class="admin-grid">
@@ -84,4 +78,5 @@ $totalPayments = $pdo->query("SELECT SUM(amount) FROM payments")->fetchColumn();
   </div>
 
 </div>
-</body></html>
+</body>
+</html>

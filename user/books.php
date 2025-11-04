@@ -1,16 +1,20 @@
 <?php
 require_once '../config.php';
 session_start();
-$q = trim($_GET['q'] ?? '');
-$category = trim($_GET['category'] ?? '');
+
+$q = trim($_GET['q'] ?? ''); //get search query 'q'
+$category = trim($_GET['category'] ?? ''); //filter ikut category
+
 $params = [];
 $sql = "SELECT * FROM books WHERE 1=1";
+
 if ($q) {
-    $sql .= " AND (bookname LIKE ? OR author LIKE ?)";
+    $sql .= " AND (bookname LIKE ? OR author LIKE ?)"; //search bookname or author
     $params[] = "%$q%";
     $params[] = "%$q%";
 }
 if ($category) {
+  // If a category is selected, add the category filter condition
     $sql .= " AND category = ?";
     $params[] = $category;
 }
@@ -18,13 +22,18 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute($params);
 $books = $stmt->fetchAll();
 
-// categories for filter
+// categories for filter (dropdown)
 $cats = $pdo->query("SELECT DISTINCT category FROM books")->fetchAll(PDO::FETCH_COLUMN);
 ?>
+
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Books - MatangReads</title>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Books - MatangReads</title>
 <link rel="stylesheet" href="../css/style.css">
-</head><body>
+</head>
+<body>
 <?php include '../navbar.php'; ?>
 
 <div class="container">
@@ -41,6 +50,7 @@ $cats = $pdo->query("SELECT DISTINCT category FROM books")->fetchAll(PDO::FETCH_
   </form>
 
   <div class="books-box">
+    // Loop through the $books array fetched from the database
   <?php foreach($books as $b): ?>
     <div class="book-card">
       <img src="../Images/<?php echo htmlspecialchars($b['image']);?>" alt="">
@@ -53,4 +63,5 @@ $cats = $pdo->query("SELECT DISTINCT category FROM books")->fetchAll(PDO::FETCH_
   <?php endforeach; ?>
   </div>
 </div>
-</body></html>
+</body>
+</html>

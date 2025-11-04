@@ -53,7 +53,6 @@ $users = $pdo->query("SELECT user_id, username, email, user_type, full_name, dat
   <table class="simple-table">
     <thead>
         <tr>
-            <th>ID</th>
             <th>Username</th>
             <th>Name</th>
             <th>Email</th>
@@ -65,7 +64,6 @@ $users = $pdo->query("SELECT user_id, username, email, user_type, full_name, dat
     <tbody>
       <?php foreach($users as $u): ?>
       <tr>
-        <td><?php echo $u['user_id'];?></td>
         <td><?php echo htmlspecialchars($u['username']);?></td>
         <td><?php echo htmlspecialchars($u['full_name']);?></td>
         <td><?php echo htmlspecialchars($u['email']);?></td>

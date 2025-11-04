@@ -43,8 +43,8 @@ $params = [];
 if ($search) {
     $sql .= " AND (bookname LIKE ? OR author LIKE ?)";
     $params[] = "%$search%";
-    $params[] = "%$search%";
 }
+
 $sql .= " ORDER BY book_id DESC";
 $stmt = $pdo->prepare($sql);
 $stmt->execute($params);

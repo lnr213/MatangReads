@@ -25,7 +25,7 @@ if (!$payment) {
 <html><head><meta charset="utf-8"><title>Receipt #<?php echo $payment_id; ?> - MatangReads</title>
 <link rel="stylesheet" href="../css/style.css">
 <style>
-/* Style for the receipt block */
+
 .receipt-box {
     background: white;
     padding: 30px;
@@ -66,9 +66,7 @@ if (!$payment) {
 
 /* Print media query for clean download */
 @media print {
-    .navbar, .no-print {
-        display: none;
-    }
+ 
     .receipt-box {
         box-shadow: none;
         margin: 0;
@@ -106,5 +104,5 @@ if (!$payment) {
         </a>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
