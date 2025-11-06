@@ -14,6 +14,7 @@ $overdue = $pdo->query("SELECT COUNT(*) FROM borrow_requests WHERE due_date < CU
 $pendingReservations = $pdo->query("SELECT COUNT(*) FROM borrow_requests WHERE status='pending'")->fetchColumn();
 $totalPayments = $pdo->query("SELECT SUM(amount) FROM payments")->fetchColumn();
 ?>
+
 <!doctype html>
 <html><head><meta charset="utf-8"><title>Admin Home</title>
 <link rel="stylesheet" href="../css/style.css"> 
