@@ -7,8 +7,8 @@ session_start();
 <head>
   <meta charset="utf-8">
   <title>MatangReads Library</title>
-  <link rel="stylesheet" href="/matangreads/css/style.css">
-  <link rel="stylesheet" href="/matangreads/css/homepage.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/homepage.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="homepage">
@@ -38,7 +38,7 @@ session_start();
 </section>
 
 <div class="view-more">
-  <a href="/matangreads/books.php" class="btn">View More Books</a>
+  <a href="user/books.php" class="btn">View More Books</a>
 </div>
 
 <footer>
