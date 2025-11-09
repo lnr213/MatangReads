@@ -1,5 +1,4 @@
-
-nav .navbar {
+nav.navbar {
   background: linear-gradient(135deg, #AE8625, #F7EF8A);
   padding: 10px 20px;
   display: flex;
@@ -10,33 +9,17 @@ nav .navbar {
   top: 0;
   z-index: 10;
 }
-.nav-left .logo { 
-    font-weight:700; 
-    color:#2d0115; 
-    text-decoration:none; 
-    font-size:20px; 
-}
+.nav-left .logo { font-weight:700; color:#2d0115; text-decoration:none; font-size:20px; }
+.nav-right a { margin-left:12px; color:#000; text-decoration:none; font-weight:600; }
+.nav-right .logout-btn { background:#ff7979; padding:6px 10px; color:#ffffff; border-radius:6px; }
+
 .nav-right { 
     display: flex; 
     align-items: center; 
 } 
-.nav-right a { 
-    margin-left:12px; 
-    color:#000; 
-    text-decoration:none; 
-    font-weight:600; 
-    padding: 6px 8px; 
-    border-radius: 4px; 
-    transition: background 0.2s; 
-}
+
 .nav-right a:hover { 
     background: rgba(45, 1, 21, 0.1); 
-}
-.nav-right .logout-btn { 
-    background:#2d0115; 
-    padding:6px 10px; 
-    color:#fff; 
-    border-radius:6px; 
 }
 
 /* Profile Link & Picture Styling */

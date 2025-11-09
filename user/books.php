@@ -50,8 +50,9 @@ $cats = $pdo->query("SELECT DISTINCT category FROM books")->fetchAll(PDO::FETCH_
   </form>
 
   <div class="books-box">
-    // Loop through the $books array fetched from the database
-  <?php foreach($books as $b): ?>
+  <?php 
+      // Loop through the $books array fetched from the database 
+  foreach($books as $b): ?>
     <div class="book-card">
       <img src="../Images/<?php echo htmlspecialchars($b['image']);?>" alt="">
       <h4><?php echo htmlspecialchars($b['bookname']);?></h4>

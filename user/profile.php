@@ -44,7 +44,7 @@ elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_PO
         $tmp = $_FILES['profile_pic']['tmp_name'];
         $image = uniqid() . '_' . basename($_FILES['profile_pic']['name']);
         
-        $upload_dir = __DIR__ . "/Images/profiles/";
+        $upload_dir = __DIR__ . "/../Images/profiles/";
         
         if (move_uploaded_file($tmp, $upload_dir . $image)) {
             // Success! Delete old file if it wasn't the default placeholder

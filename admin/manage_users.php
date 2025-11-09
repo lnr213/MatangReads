@@ -43,7 +43,7 @@ $count = 0;
   <table class="simple-table">
     <thead>
         <tr>
-            <th>No</th> <!-- Changed from ID -->
+            <th>No</th> 
             <th>Username</th>
             <th>Name</th>
             <th>Email</th>

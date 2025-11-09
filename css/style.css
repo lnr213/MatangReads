@@ -227,3 +227,87 @@ button:hover { opacity:0.9; }
         gap: 10px;
     }
 }
+
+.payment-modal {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #1a1a1a; /* Dark background inside modal */
+    color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    border: 2px solid #AE8625; /* Gold border */
+}
+.payment-modal h2, .payment-modal h3 {
+    color: #F7EF8A; /* Gold color for headers */
+    text-align: center;
+    border-bottom: 1px solid #AE8625;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.qr-container {
+    text-align: center;
+    margin: 20px 0;
+}
+.qr-container img {
+    width: 250px;
+    height: 250px;
+    border: 5px solid #fff;
+    border-radius: 8px;
+    display: inline-block;
+}
+.info-status {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+/* --- NEW: Payment Form Grid Layout --- */
+.payment-grid {
+    display: grid;
+    /* Two main columns: One for labels (narrow), one for fields (wider) */
+    grid-template-columns: 1fr 2fr; 
+    gap: 15px 10px; /* Vertical and horizontal gap */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.payment-grid label {
+    text-align: right; /* Align labels to the right */
+    font-weight: bold;
+    color: #f0f0f0; /* Ensure label color is maintained */
+    /* Remove the default label styles from pay.php for a clean look */
+}
+
+/* Ensure inputs/selects inside the grid take full column width */
+.payment-grid input,
+.payment-grid select {
+    width: calc(100% - 10px); /* Adjust width to fit nicely */
+    margin: 0; /* Remove default margin that breaks the grid */
+}
+
+/* Make the description input span both columns */
+.payment-grid .full-span-field {
+    grid-column: 1 / 3;
+}
+
+/* Custom styling for the Card Fields box */
+#card-fields {
+    grid-column: 1 / 3; /* Make card fields span both columns */
+    padding: 15px; 
+    margin-top: 15px; 
+    border-radius: 8px;
+    background: #222; /* Keep the existing background for visual separation */
+}
+
+/* Ensure the description label and input are in a separate row and aligned */
+.description-group {
+    grid-column: 1 / 3; /* Spans both columns */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px 10px;
+    align-items: center;
+    margin-top: 10px;
+}
